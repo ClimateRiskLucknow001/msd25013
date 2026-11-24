@@ -1,0 +1,5 @@
+case,eal,p95,max_loss,strategy_desc
+no_action,2.61,20.65,42.18,No resilience investment; absorb full hydrological losses
+adaptation,1.51,11.98,24.46,Physical intake retrofits & floating solar PV hybrid
+insurance,1.06,8.65,30.18,Parametric water-level insurance trigger (478m asl)
+combined,0.41,2.5,12.46,Integrated engineering adaptation + parametric risk transfer

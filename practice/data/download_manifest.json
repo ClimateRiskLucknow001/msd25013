@@ -1,0 +1,58 @@
+{
+  "project": "Climate Risk, Value, and Investing - Practice Capstone",
+  "student_id": "msd25013",
+  "region": "Sub-Saharan Africa",
+  "sectors": [
+    "Materials",
+    "Financials"
+  ],
+  "focal_asset": "Hydropower reservoir (Lake Kariba drought hazard)",
+  "focal_bond": "Republic of Seychelles Sovereign Blue Bond",
+  "sources": [
+    {
+      "name": "First Quantum Minerals Annual Sustainability & Financial Report",
+      "url": "https://www.first-quantum.com/investor-centre/financial-reports/default.aspx",
+      "retrieved_on": "2026-11-15",
+      "licence": "Public Issuer Disclosure",
+      "units": "USD millions, MtCO2e",
+      "coverage": "FQM Zambia Operations",
+      "checksum": "3fb4eabc16a2218f75549166a798474bc84ce7949fcc9bc9bc565300d30903d3"
+    },
+    {
+      "name": "Anglo American Platinum Annual Sustainability & Climate Report",
+      "url": "https://www.angloamericanplatinum.com/investors/annual-reporting/2025",
+      "retrieved_on": "2026-11-15",
+      "licence": "Public Corporate Disclosure",
+      "units": "ZAR/USD millions, MtCO2e",
+      "coverage": "Amplats South Africa / Zimbabwe",
+      "checksum": "3fb4eabc16a2218f75549166a798474bc84ce7949fcc9bc9bc565300d30903d3"
+    },
+    {
+      "name": "Standard Bank Group Climate & ESG Report",
+      "url": "https://reporting.standardbank.com/esg-reports/",
+      "retrieved_on": "2026-11-15",
+      "licence": "Public Financial Disclosure",
+      "units": "ZAR/USD millions, portfolio metrics",
+      "coverage": "Standard Bank Group Pan-Africa",
+      "checksum": "3fb4eabc16a2218f75549166a798474bc84ce7949fcc9bc9bc565300d30903d3"
+    },
+    {
+      "name": "Zambezi River Authority Hydrological Records (Kariba Dam)",
+      "url": "https://www.zambezira.org/lake-kariba-weekly-levels",
+      "retrieved_on": "2026-11-16",
+      "licence": "Public Authority Data",
+      "units": "Meters asl, BCM, GWh",
+      "coverage": "Lake Kariba Reservoir (Zambia / Zimbabwe)",
+      "checksum": "6be9acd6bf43d1bd86b28805708f3eb553ea621954174f9dc8288f31f9742c03"
+    },
+    {
+      "name": "World Bank / GEF Sovereign Blue Bond Project Documentation",
+      "url": "https://www.worldbank.org/en/news/press-release/2018/10/29/seychelles-launches-worlds-first-sovereign-blue-bond",
+      "retrieved_on": "2026-11-16",
+      "licence": "World Bank Open Knowledge Repository",
+      "units": "USD, percentage coupon",
+      "coverage": "Republic of Seychelles",
+      "checksum": "0c9d80dc1b9bf4dbc92bf849a8701f5ae3c59135722e3e0dad6fde943609b495"
+    }
+  ]
+}

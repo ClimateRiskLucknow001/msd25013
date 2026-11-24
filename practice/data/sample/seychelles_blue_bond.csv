@@ -1,0 +1,2 @@
+instrument,issuer,issuance_year,maturity_years,face_value_musd,nominal_coupon,effective_coupon_net_guarantee,world_bank_guarantee_musd,gef_concessional_loan_musd,credit_rating_proxy,proceeds_use,external_review,step_up_clause
+Republic of Seychelles Sovereign Blue Bond,Republic of Seychelles,2018,10,15.0,0.0665,0.0325,5.0,5.0,BB-,"Marine Spatial Planning, sustainable fisheries, coastal adaptation, blue economy SMEs",DNV GL Second Party Opinion,KPI missed coupon step-up +25 bps

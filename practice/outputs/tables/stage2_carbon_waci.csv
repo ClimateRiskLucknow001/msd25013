@@ -1,0 +1,5 @@
+metric,value,note
+Emissions Disclosed Coverage,75%,3 of 4 holdings report verified Scope 1+2
+Raw WACI,202.9 tCO2e/MUSD,Excludes unreporting financial peer
+Imputed Financial Intensity (EQT-KE),95.0 tCO2e/MUSD,Regional commercial banking proxy
+Effective Portfolio WACI,226.7 tCO2e/MUSD,Full coverage post-imputation

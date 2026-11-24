@@ -1,0 +1,5 @@
+ticker,company_name,sector,weight,carbon_penalty,esg_normalized,physical_penalty,composite_score,recommended_weight,action
+SBK-ZA,Standard Bank Group Ltd,Financials,0.25,0.03,0.82,0.442,0.144,0.3,Overweight / Green Transition Lending
+EQT-KE,Equity Group Holdings Plc,Financials,0.25,0.185,0.58,0.533,-0.022,0.4,Overweight / SME Drought Resilience
+AMS-ZA,Anglo American Platinum Ltd,Materials,0.25,1.0,0.78,0.286,-0.163,0.15,Underweight / Monitor Carbon Tax
+FQM-ZM,First Quantum Minerals Ltd (Zambia),Materials,0.25,0.554,0.65,0.748,-0.191,0.15,Underweight / Active Stewardship

@@ -1,0 +1,17 @@
+field,type,unit,source,notes,status
+ticker,string,none,Exchange / Identifier,Holding ticker symbol,observed
+company_name,string,none,Issuer Filing,Full legal entity name,observed
+sector,string,none,GICS / Handout,Materials or Financials,observed
+country,string,none,Issuer Filing,Primary operational jurisdiction,observed
+revenue_musd,float,USD Millions,Annual Financial Statements,Annual headline revenue,observed
+weight,float,fraction,Portfolio Construction,Benchmark portfolio weighting (0.25 each),assumed
+scope1_2_emissions_mtco2e,float,MtCO2e,Corporate Sustainability Report,Scope 1 + Scope 2 emissions,observed
+emis_intensity_tco2_per_musd,float,tCO2e / MUSD,Derived: emissions / revenue * 1e6,Carbon intensity per unit revenue,estimated
+physical_exposure,float,0-1 scale,WRI Aqueduct / Asset Mapping,Exposure score to physical climate hazards,estimated
+transition_exposure,float,0-1 scale,Policy & Emissions Modelling,Exposure score to transition policy and carbon tax,estimated
+primary_channel,string,categorical,Classification Rule,physical or transition,estimated
+transmission_note,string,text,Qualitative Analysis,Causal transmission pathway to asset value,estimated
+water_level_m_asl,float,meters above sea level,Zambezi River Authority,"Reservoir operating level (min 475.5m, full 488.5m)",observed
+inflow_bcm,float,Billion Cubic Meters,ZRA Hydrology,Annual water inflow into Kariba reservoir,observed
+generation_gwh,float,GWh,ZESCO / ZPC operational reports,Annual electricity generation output,observed
+curtailment_pct,float,percent,Grid / Utility Disclosures,Power generation deficit / curtailment,observed

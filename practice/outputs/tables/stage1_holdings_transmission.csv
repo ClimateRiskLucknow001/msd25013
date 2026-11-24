@@ -1,0 +1,5 @@
+ticker,company_name,sector,region,revenue_musd,weight,emis_intensity_tco2_per_musd,physical_exposure,transition_exposure,primary_channel,transmission_note
+FQM-ZM,First Quantum Minerals Ltd (Zambia),Materials,Sub-Saharan Africa,7400.0,0.25,283.8,0.85,0.58,physical,Lake Kariba drought cuts hydropower to Kansanshi copper mine; expensive diesel generation inflates opex.
+AMS-ZA,Anglo American Platinum Ltd,Materials,Sub-Saharan Africa,8200.0,0.25,512.2,0.55,0.78,transition,Eskom coal grid reliance subjects smelting assets to SA Carbon Tax Act escalation (ZAR 190 to 462/t).
+SBK-ZA,Standard Bank Group Ltd,Financials,Sub-Saharan Africa,9600.0,0.25,15.6,0.65,0.62,physical,Drought spikes agricultural NPLs and sovereign utility debt default risk in Zambia/Zimbabwe.
+EQT-KE,Equity Group Holdings Plc,Financials,Sub-Saharan Africa,1400.0,0.25,,0.72,0.35,physical,East Africa drought cascades to agricultural SME loan defaults; offset by resilience lending.
