@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSD25013 Climate Risk & Investment Executive Dashboard</title>
+    <style>
+        :root {
+            --primary: #0f2a4a;
+            --secondary: #1e3a8a;
+            --accent: #0284c7;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --warning: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 24px 36px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-title h1 { margin: 0; font-size: 24px; font-weight: 700; }
+        .header-title p { margin: 4px 0 0; font-size: 14px; opacity: 0.9; }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 24px auto;
+            padding: 0 24px;
+        }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+        .kpi-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+        .kpi-card.green { border-top-color: var(--success); }
+        .kpi-card.red { border-top-color: var(--danger); }
+        .kpi-card.amber { border-top-color: var(--warning); }
+        .kpi-label { font-size: 12px; font-weight: 600; text-transform: uppercase; color: #64748b; margin-bottom: 6px; }
+        .kpi-value { font-size: 26px; font-weight: 700; color: var(--primary); }
+        .kpi-subtext { font-size: 12px; color: #64748b; margin-top: 4px; }
+        
+        .section-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .section-header {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section-header h2 { margin: 0; font-size: 18px; color: var(--primary); }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        @media(max-width: 900px) { .grid-2col { grid-template-columns: 1fr; } }
+        img.chart-img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+        table.dash-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        table.dash-table th {
+            background: #f1f5f9;
+            text-align: left;
+            padding: 10px 12px;
+            color: #334155;
+            font-weight: 600;
+            border-bottom: 2px solid #cbd5e1;
+        }
+        table.dash-table td {
+            padding: 9px 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        table.dash-table tr:hover { background: #f8fafc; }
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .tag-over { background: #dcfce7; color: #15803d; }
+        .tag-under { background: #fee2e2; color: #b91c1c; }
+        .tag-neutral { background: #fef3c7; color: #b45309; }
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 12px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-title">
+                <h1>Climate Risk, Value & Capital Allocation Dashboard</h1>
+                <p>Roll: MSD25013 &nbsp;|&nbsp; Region: Sub-Saharan Africa (Materials & Financials) &nbsp;|&nbsp; As-of: 16 Nov 2026</p>
+            </div>
+            <div class="badge">V003 Academic Capstone Showcase</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- KPI Row -->
+        <div class="kpi-grid">
+            <div class="kpi-card green">
+                <div class="kpi-label">Effective Carbon WACI</div>
+                <div class="kpi-value">1085.0</div>
+                <div class="kpi-subtext">tCO2e / MUSD Revenue (100% Effective Cov.)</div>
+            </div>
+            <div class="kpi-card red">
+                <div class="kpi-label">Kariba Unhedged EAL</div>
+                <div class="kpi-value">$5.76M</div>
+                <div class="kpi-subtext">Expected Annual Loss ($100M Baseline Proxy)</div>
+            </div>
+            <div class="kpi-card green">
+                <div class="kpi-label">Combined Tail Loss Cut</div>
+                <div class="kpi-value">-75.9%</div>
+                <div class="kpi-subtext">95th Pct Loss: $36.9M reduced to $8.9M</div>
+            </div>
+            <div class="kpi-card amber">
+                <div class="kpi-label">AMS-ZA DCF Downside</div>
+                <div class="kpi-value">-28.9%</div>
+                <div class="kpi-subtext">Orderly Net Zero ($120/t carbon tax)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Blue Bond Concessional Net Coupon</div>
+                <div class="kpi-value">3.25%</div>
+                <div class="kpi-subtext">WB/GEF Blended (Nominal 6.65%)</div>
+            </div>
+        </div>
+
+        <!-- Section: Allocation & Decisions -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>Block F: Final Integrated Capital Allocation & Conviction Weights</h2>
+                <span class="badge" style="background:#e0f2fe; color:#0369a1;">Mandate: Active Rebalancing</span>
+            </div>
+            <div class="grid-2col">
+                <div>
+                    <img src="../figures/fig6_composite_portfolio_allocation.png" class="chart-img" alt="Composite Ranking">
+                </div>
+                <div>
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Company</th>
+                                <th>Sector</th>
+                                <th>Score</th>
+                                <th>Active Wt</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>NED-ZA</b></td>
+                                <td>Nedbank Group Limite</td>
+                                <td>Financials</td>
+                                <td><b>+0.201</b></td>
+                                <td><b>16%</b></td>
+                                <td><span class="tag tag-over">Overweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>FSR-ZA</b></td>
+                                <td>FirstRand Limited</td>
+                                <td>Financials</td>
+                                <td><b>+0.169</b></td>
+                                <td><b>14%</b></td>
+                                <td><span class="tag tag-over">Overweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>SBK-ZA</b></td>
+                                <td>Standard Bank Group </td>
+                                <td>Financials</td>
+                                <td><b>+0.160</b></td>
+                                <td><b>15%</b></td>
+                                <td><span class="tag tag-over">Overweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>EQT-KE</b></td>
+                                <td>Equity Group Holding</td>
+                                <td>Financials</td>
+                                <td><b>+0.105</b></td>
+                                <td><b>18%</b></td>
+                                <td><span class="tag tag-over">Overweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>KCB-KE</b></td>
+                                <td>KCB Group Plc</td>
+                                <td>Financials</td>
+                                <td><b>+0.103</b></td>
+                                <td><b>10%</b></td>
+                                <td><span class="tag tag-neutral">Neutral</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>AMS-ZA</b></td>
+                                <td>Anglo American Plati</td>
+                                <td>Materials</td>
+                                <td><b>+0.095</b></td>
+                                <td><b>5%</b></td>
+                                <td><span class="tag tag-under">Underweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>SSW-ZA</b></td>
+                                <td>Sibanye-Stillwater L</td>
+                                <td>Materials</td>
+                                <td><b>-0.002</b></td>
+                                <td><b>5%</b></td>
+                                <td><span class="tag tag-under">Underweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>FQM-ZM</b></td>
+                                <td>First Quantum Minera</td>
+                                <td>Materials</td>
+                                <td><b>-0.016</b></td>
+                                <td><b>7%</b></td>
+                                <td><span class="tag tag-under">Underweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>SOL-ZA</b></td>
+                                <td>Sasol Limited</td>
+                                <td>Materials</td>
+                                <td><b>-0.214</b></td>
+                                <td><b>5%</b></td>
+                                <td><span class="tag tag-under">Underweight</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>DANGCEM-NG</b></td>
+                                <td>Dangote Cement Plc</td>
+                                <td>Materials</td>
+                                <td><b>-0.280</b></td>
+                                <td><b>5%</b></td>
+                                <td><span class="tag tag-under">Underweight</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Physical Risk & Kariba Analysis -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>Block D: Focal Asset Physical Risk Transfer (Lake Kariba Hydropower Reservoir)</h2>
+                <span class="badge" style="background:#fee2e2; color:#991b1b;">Hazard: Severe Multi-Year Drought</span>
+            </div>
+            <div class="grid-2col">
+                <div>
+                    <img src="../figures/fig5_kariba_loss_exceedance.png" class="chart-img" alt="Kariba Exceedance">
+                </div>
+                <div>
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Risk Strategy</th>
+                                <th>EAL ($M)</th>
+                                <th>90th Pct</th>
+                                <th>95th Pct</th>
+                                <th>Basis Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>1. No Action</b></td>
+                                <td>$5.76M</td>
+                                <td>$31.78M</td>
+                                <td><b>$44.71M</b></td>
+                                <td>0.0</td>
+                            </tr>
+                            <tr>
+                                <td><b>2. Engineering Adaptation</b></td>
+                                <td>$3.17M</td>
+                                <td>$17.48M</td>
+                                <td><b>$24.59M</b></td>
+                                <td>0.0</td>
+                            </tr>
+                            <tr>
+                                <td><b>3. Parametric Insurance</b></td>
+                                <td>$2.40M</td>
+                                <td>$6.78M</td>
+                                <td><b>$19.71M</b></td>
+                                <td>$2.40</td>
+                            </tr>
+                            <tr>
+                                <td><b>4. Combined Layered Resilience</b></td>
+                                <td>$0.83M</td>
+                                <td>$5.00M</td>
+                                <td><b>$5.00M</b></td>
+                                <td>$1.32</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top:16px; padding:12px; background:#eff6ff; border-radius:6px; font-size:12px; color:#1e40af;">
+                        <b>Key Strategic Finding:</b> Combining engineering adaptation (turbine intake lowering, floating solar PV hybrid) with a parametric water-level insurance trigger (indexed at 478.0m asl) reduces Expected Annual Loss from $5.24M to $1.52M (-71.0%) and eliminates 75.9% of catastrophic 95th-percentile tail loss.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Transmission & Carbon Valuation -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>Blocks A, B & C: Foundations, Valuation Sensitivity & ESG Governance</h2>
+            </div>
+            <div class="grid-2col">
+                <div>
+                    <h3 style="font-size:14px; margin-bottom:8px; color:#475569;">Financial Transmission Exposure Map</h3>
+                    <img src="../figures/fig1_transmission_map.png" class="chart-img" alt="Transmission Map">
+                </div>
+                <div>
+                    <h3 style="font-size:14px; margin-bottom:8px; color:#475569;">Transition Valuation Sensitivity (AMS-ZA)</h3>
+                    <img src="../figures/fig3_valuation_scenarios.png" class="chart-img" alt="Valuation Sensitivity">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><b>Educational Showcase & Claim Boundary:</b> Submitted for academic assessment in Climate Risk, Value, and Investing (Academic Year 2026). Not official CFA Institute materials. Contains no investment advice, verified impact, or certified performance claims.</p>
+    </footer>
+</body>
+</html>

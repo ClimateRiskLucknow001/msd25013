@@ -1,0 +1,23 @@
+field,type,unit,source,notes,status
+ticker,string,none,Ticker / Exchange Code,Holding ticker symbol,observed
+company_name,string,none,Official Filing,Full legal registered entity name,observed
+sector,string,none,GICS Classification,Materials or Financials,observed
+sub_sector,string,none,GICS Sub-Industry,Specific operational sub-industry,observed
+country,string,none,Issuer Filing,Primary operational headquarters / asset location,observed
+region,string,none,Handout Specification,Sub-Saharan Africa,observed
+market_cap_musd,float,USD Millions,Exchange Market Data,Market capitalization as of 16 Nov 2026,observed
+revenue_musd,float,USD Millions,Audited Annual Financials,FY2024 annual revenue,observed
+ebitda_musd,float,USD Millions,Audited Financials,Operating cash generation metric,observed
+weight,float,fraction,Equal-Weighted Benchmark,Initial benchmark portfolio weight (0.10 each),assumed
+scope1_mtco2e,float,MtCO2e,Corporate Sustainability Report,Direct combustion and operational emissions,observed
+scope2_mtco2e,float,MtCO2e,Corporate Sustainability Report,Purchased grid electricity emissions,observed
+scope1_2_emissions_mtco2e,float,MtCO2e,Sum of Scope 1 + 2,Total audited operational emissions,observed
+emis_intensity_tco2_per_musd,float,tCO2e / MUSD,Derived: total emissions / revenue * 1e6,Corporate carbon intensity,estimated
+physical_exposure,float,0-1 index,WRI Aqueduct & Asset Geocoding,Vulnerability score to acute drought & water stress,estimated
+transition_exposure,float,0-1 index,NGFS Scenario Alignment,Exposure score to carbon taxes & policy stranding,estimated
+primary_channel,string,categorical,Classification Rule,physical or transition,estimated
+transmission_note,string,narrative,Fundamental Climate Research,Mechanism of climate impact on cash flows,estimated
+water_level_m_asl,float,meters asl,Zambezi River Authority,Lake Kariba operating elevation,observed
+usable_storage_pct,float,percent,ZRA Hydrology,Storage between 475.5m and 488.5m asl,observed
+inflow_bcm,float,Billion Cubic Meters,ZRA Hydrology,Annual river inflow to Lake Kariba,observed
+generation_curtailment_pct,float,percent,ZESCO & ZPC Bulletins,Power generation curtailment from normal capacity,observed

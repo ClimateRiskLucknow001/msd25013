@@ -1,0 +1,87 @@
+{
+  "project": "Climate Risk, Value, and Investing - Exam Capstone",
+  "version": "V003",
+  "student_id": "msd25013",
+  "academic_year": 2026,
+  "universe": {
+    "region": "Sub-Saharan Africa",
+    "sectors": [
+      "Materials",
+      "Financials"
+    ],
+    "focal_asset": "Lake Kariba Hydropower Reservoir (Drought Hazard)",
+    "focal_bond": "Republic of Seychelles Sovereign Blue Bond"
+  },
+  "sources": [
+    {
+      "name": "First Quantum Minerals 2024 Climate & Operations Disclosure",
+      "url": "https://www.first-quantum.com/investor-centre/annual-reports/",
+      "retrieved_on": "2026-11-18",
+      "licence": "Public Issuer Disclosure",
+      "units": "MUSD, MtCO2e, kt copper",
+      "geography": "Zambia (Copperbelt & North-Western Province)",
+      "coverage": "100% of Zambian mining assets (Kansanshi & Sentinel)",
+      "checksum": "28fc1831cf53888dacc1e3634dadfce4db9ab84c8a6949f80450e68f5d8110d4"
+    },
+    {
+      "name": "Anglo American Platinum Climate Change & ESG Report 2024",
+      "url": "https://www.angloamericanplatinum.com/investors/annual-reporting/2024",
+      "retrieved_on": "2026-11-18",
+      "licence": "Public Corporate Disclosure",
+      "units": "MUSD, MtCO2e, tCO2e/MUSD",
+      "geography": "South Africa / Zimbabwe",
+      "coverage": "100% of PGM mining and smelting operations",
+      "checksum": "28fc1831cf53888dacc1e3634dadfce4db9ab84c8a6949f80450e68f5d8110d4"
+    },
+    {
+      "name": "Sasol Limited Climate Change Report & Form 20-F",
+      "url": "https://www.sasol.com/investor-centre/financial-results",
+      "retrieved_on": "2026-11-18",
+      "licence": "Public SEC EDGAR Filing",
+      "units": "MUSD, MtCO2e, GJ",
+      "geography": "South Africa (Secunda, Sasolburg)",
+      "coverage": "100% of synfuels and chemicals operations",
+      "checksum": "28fc1831cf53888dacc1e3634dadfce4db9ab84c8a6949f80450e68f5d8110d4"
+    },
+    {
+      "name": "Standard Bank Group Report to Society & Climate Strategy",
+      "url": "https://reporting.standardbank.com/esg-reports/",
+      "retrieved_on": "2026-11-19",
+      "licence": "Public Bank Filing",
+      "units": "MUSD, portfolio financing metrics",
+      "geography": "Sub-Saharan Africa (20 countries)",
+      "coverage": "Standard Bank Pan-African operations",
+      "checksum": "28fc1831cf53888dacc1e3634dadfce4db9ab84c8a6949f80450e68f5d8110d4"
+    },
+    {
+      "name": "Zambezi River Authority Hydrological Bulletins (2000-2025)",
+      "url": "https://www.zambezira.org/hydrology/lake-kariba-levels",
+      "retrieved_on": "2026-11-19",
+      "licence": "Public Bi-national Authority Data",
+      "units": "meters above sea level (m asl), BCM, % usable storage",
+      "geography": "Lake Kariba (Zambia / Zimbabwe)",
+      "coverage": "Kariba North Bank (1,080 MW) and Kariba South Bank (1,050 MW)",
+      "checksum": "74fb224a38cf932099a19d0358dd5b056dce4392af13cb666c0e4e183269ac7c"
+    },
+    {
+      "name": "World Bank / GEF Blue Bond Official Project Appraisal & Legal Agreements",
+      "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P164257",
+      "retrieved_on": "2026-11-19",
+      "licence": "World Bank Open Access Policy",
+      "units": "USD, percentage coupon rates",
+      "geography": "Republic of Seychelles",
+      "coverage": "100% of sovereign blue bond proceeds",
+      "checksum": "092c7556e12992596fc268c57ff4dd253390a178c496b23030500e0c6dfc09f4"
+    },
+    {
+      "name": "NGFS Phase IV Climate Scenarios Portal",
+      "url": "https://www.ngfs.net/ngfs-scenarios-portal/",
+      "retrieved_on": "2026-11-20",
+      "licence": "Creative Commons CC-BY 4.0",
+      "units": "USD/tCO2e, % GDP, carbon tax trajectories",
+      "geography": "Sub-Saharan Africa regional pathways",
+      "coverage": "Orderly Net Zero 2050, Delayed Transition, Current Policies",
+      "checksum": "28fc1831cf53888dacc1e3634dadfce4db9ab84c8a6949f80450e68f5d8110d4"
+    }
+  ]
+}

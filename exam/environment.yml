@@ -1,0 +1,15 @@
+name: msd25013-exam
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - numpy>=1.24.0
+  - pandas>=2.0.0
+  - matplotlib>=3.7.0
+  - scipy>=1.10.0
+  - pytest>=7.0.0
+  - pip
+  - pip:
+      - reportlab>=4.0.0
+      - python-pptx>=1.0.0
